@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  display: block;
+  margin: auto;
+  height: 100px;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+  font-size: 1em;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.routeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  height: 160px;
+  overflow-y: scroll;
+}
+
+.routes {
+  font-size: 1.2em;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(230, 0, 18, 0.8);
+  margin: 5px 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: gainsboro;
+}
+
+.busDataContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin: 20px 30px;
+  padding: 20px;
+}
+
+.buses {
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(230, 0, 18, 0.8);
+  background-color: white;
+  margin: 5px;
+  padding: 10px;
+  width: 15.8%;
+}
+
+.firstBus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.secondBus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.busTime {
+  padding-top: 2px;
+}
+
+.busTrips {
+  padding-left: 10px;
 }

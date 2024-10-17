@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import { fetchAllLineData } from "./fetchFunction";
+import SearchBar from "./component/SearchBar";
+import ChoosingRoute from "./component/ChoosingRoute";
+import ShowingStopsAndTime from "./component/ShowingStopsAndTime";
 
 function App() {
+  const [allLineData, setAllLineData] = useState([]);
+  const [search, setSearch] = useState("");
+  const [choosedRoute, setChoosedRoute] = useState({});
+
+  useEffect(() => {
+    const fetch = async () => {
+      const data = await fetchAllLineData();
+      setAllLineData(data);
+    };
+    fetch();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SearchBar search={search} setSearch={setSearch} />
+      <ChoosingRoute
+        allLineData={allLineData}
+        enteredRoute={search}
+        choosedRoute={choosedRoute}
+        setChoosedRoute={setChoosedRoute}
+      />
+      <ShowingStopsAndTime choosedRoute={choosedRoute} />
+    </>
   );
 }
 
