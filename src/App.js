@@ -20,11 +20,14 @@ function App() {
 
   return (
     <>
-      <SearchBar search={search} setSearch={setSearch} />
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+        setChoosedRoute={setChoosedRoute}
+      />
       <ChoosingRoute
         allLineData={allLineData}
         enteredRoute={search}
-        choosedRoute={choosedRoute}
         setChoosedRoute={setChoosedRoute}
       />
       <ShowingStopsAndTime choosedRoute={choosedRoute} />

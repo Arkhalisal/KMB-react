@@ -23,7 +23,7 @@ function ChoosingRoute({ allLineData, enteredRoute, setChoosedRoute }) {
 
           return (
             <div
-              key={x}
+              key={index}
               className={`routes ${isSelected ? "selected" : ""}`}
               onClick={() => handleEnteredRoute(x, index)}
             >{`${x.route} ${x.orig_tc} to ${x.dest_tc}`}</div>

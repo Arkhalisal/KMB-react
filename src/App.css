@@ -3,11 +3,20 @@
   margin: 0;
 }
 
+.logoTimeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100px;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
 .logo {
   display: block;
-  margin: auto;
+  position: absolute;
   height: 100px;
-  margin-top: 10px;
 }
 
 .inputContainer {
@@ -66,7 +75,7 @@
   background-color: white;
   margin: 5px;
   padding: 10px;
-  width: 15.8%;
+  width: 19%;
 }
 
 .firstBus {
@@ -87,4 +96,28 @@
 
 .busTrips {
   padding-left: 10px;
+}
+
+@media (width < 960px) {
+  .logoTimeContainer {
+    flex-direction: column;
+  }
+  .logo {
+    position: initial;
+  }
+  .lastUpdateTime {
+    order: 1;
+  }
+  /* .busDataContainer {
+    flex-direction: column;
+  } */
+  .buses {
+    width: 25%;
+  }
+}
+
+@media (width < 720px) {
+  .buses {
+    width: 40%;
+  }
 }

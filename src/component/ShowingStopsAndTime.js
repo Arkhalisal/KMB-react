@@ -22,8 +22,8 @@ function ShowingStopsAndTime({ choosedRoute }) {
     <div className="busDataContainer">
       {busStopData.map((busStop, index) => {
         return (
-          <div className="buses">
-            <div>{`${index}. ` + busStop[0].name}</div>
+          <div className="buses" key={index}>
+            <div>{`${index + 1}. ` + busStop[0].name}</div>
             <div className="firstBus">
               <div className="busTime">
                 {!busStop[0].time ? "No Bus Is Available" : busStop[0].time}
