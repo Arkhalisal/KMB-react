@@ -1,17 +1,20 @@
+import moment from "moment";
+
 function SearchBar({ search, setSearch, setChoosedRoute }) {
   function handleSearch(ev) {
     setSearch(ev.target.value.toUpperCase().replace(/[^a-zA-Z0-9]/g, ""));
     setChoosedRoute({});
   }
-
-  const timeNow = new Date().toLocaleTimeString();
+  const timeNow = moment(new Date()).format("hh:mm:ss a");
 
   return (
     <>
       <div className="logoTimeContainer">
         <div className="lastUpdateTime">
           last update time:
-          {`${timeNow.slice(0, 7)}${timeNow.slice(7, 9) > 30 ? "30" : "00"}`}
+          {`${timeNow.slice(0, 6)}${
+            timeNow.slice(6, 8) > 30 ? "30" : "00"
+          } ${timeNow.slice(8, 11)}`}
         </div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/b/b4/KowloonMotorBus.svg"

@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const generalApi = "https://data.etabus.gov.hk/v1/transport/kmb/";
 
 async function mainFetch(path) {
@@ -35,11 +37,11 @@ const fetchBusStopTime = async (stop_id, route, service_type) => {
   const timeData = await mainFetch(`eta/${stop_id}/${route}/${service_type}`);
   const firstBusData = {
     name: nameData.name_tc,
-    time: timeData[0]?.eta?.slice(11, 19),
+    time: moment(timeData[0]?.eta).format("hh:mm:ss a"),
     trips: timeData[0]?.rmk_tc,
   };
   const secondBusData = {
-    time: timeData[1]?.eta?.slice(11, 19),
+    time: moment(timeData[1]?.eta).format("hh:mm:ss a"),
     trips: timeData[1]?.rmk_tc,
   };
   return [firstBusData, secondBusData];
