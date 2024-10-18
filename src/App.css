@@ -23,13 +23,14 @@
 .inputContainer {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
   position: relative;
 }
 
 .input {
   font-size: 0.9em;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .routeContainer {
@@ -57,16 +58,23 @@
   background-color: gainsboro;
 }
 
-.busDataContainer {
+.allDataContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid black;
   background-color: lightgray;
   border-radius: 20px;
   margin: 20px 30px;
   padding: 20px;
+}
+
+.busDataContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .buses {
