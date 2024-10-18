@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MTR-react/static/css/main.494a2bf1.css",
-    "main.js": "/MTR-react/static/js/main.a124542f.js",
-    "index.html": "/MTR-react/index.html",
-    "main.494a2bf1.css.map": "/MTR-react/static/css/main.494a2bf1.css.map",
-    "main.a124542f.js.map": "/MTR-react/static/js/main.a124542f.js.map"
+    "main.css": "/KMB-react/static/css/main.5ff35381.css",
+    "main.js": "/KMB-react/static/js/main.05356349.js",
+    "index.html": "/KMB-react/index.html",
+    "main.5ff35381.css.map": "/KMB-react/static/css/main.5ff35381.css.map",
+    "main.05356349.js.map": "/KMB-react/static/js/main.05356349.js.map"
   },
   "entrypoints": [
-    "static/css/main.494a2bf1.css",
-    "static/js/main.a124542f.js"
+    "static/css/main.5ff35381.css",
+    "static/js/main.05356349.js"
   ]
 }
