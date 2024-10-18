@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/KMB-react/static/css/main.5ff35381.css",
+    "main.css": "/KMB-react/static/css/main.8f959fc5.css",
     "main.js": "/KMB-react/static/js/main.05356349.js",
     "index.html": "/KMB-react/index.html",
-    "main.5ff35381.css.map": "/KMB-react/static/css/main.5ff35381.css.map",
+    "main.8f959fc5.css.map": "/KMB-react/static/css/main.8f959fc5.css.map",
     "main.05356349.js.map": "/KMB-react/static/js/main.05356349.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ff35381.css",
+    "static/css/main.8f959fc5.css",
     "static/js/main.05356349.js"
   ]
 }
